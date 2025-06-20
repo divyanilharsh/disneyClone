@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Jester';
+  src: url('./fonts/Jester.ttf') format('truetype'); /* Path relative to public/fonts.css */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bastliga One';
+  src: url('./fonts/Bastliga One.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
