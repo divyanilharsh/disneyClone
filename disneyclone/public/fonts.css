@@ -11,3 +11,10 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Angelos';
+  src: url('./fonts/Angelos.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
