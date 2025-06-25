@@ -3,7 +3,7 @@ import Styled from 'styled-components';
 const Header = (props) => {
     return <Nav>
         <LOGO><img src="/img/feathers.png" alt="Logo" /></LOGO>
-        <NavMenu>=-=</NavMenu>
+        <NavMenu><Home /><Search /><About /><WatchList /></NavMenu>
         <Login onClick={props.onLogin}>Login</Login>
          </Nav>;
    
@@ -60,8 +60,165 @@ const NavMenu = Styled.div`
   margin-right: auto;
   position: relative;
   margin-left: 200px;
-  @media (max-width: 768px) {
+  @media (max-width: 400px) {
     display: none;
   } 
+    
+`;
+const Home = Styled.a`
+  position: relative;
+  display: inline-flex; 
+  align-items: center; 
+  height: 100px; 
+  text-decoration: none; 
+  padding: 0 15px; 
+  cursor: pointer;
+
+  &::before { 
+    content: "";
+    display: inline-block;
+    width: 100px; 
+    height: 100px; 
+    background-image: url("/img/home.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(100%); 
+    margin-right: 10px; 
+  }
+
+  &::after { 
+    content: "Home";
+    color: #f9f9f9; 
+    font-size: 50px; 
+    font-weight: bold;
+  }
+  
+  &:hover {
+   transition: transform 0.5s ease-in-out; 
+   transform: scale(1.1); 
+
+   &::before { 
+     filter: invert(20%); 
+     transition: filter 0.5s ease-in-out; 
+   }
+  }
+`;
+const Search = Styled.a`
+ position: relative;
+  display: inline-flex; 
+  align-items: center; 
+  height: 100px; 
+  text-decoration: none; 
+  padding: 0 15px; 
+  cursor: pointer;
+
+  &::before { 
+    content: "";
+    display: inline-block;
+    width: 100px; 
+    height: 100px; 
+    background-image: url("/img/search.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(100%); 
+    margin-right: 10px; 
+  }
+
+  &::after { 
+    content: "Search ";
+    color: #f9f9f9; 
+    font-size: 50px; 
+    font-weight: bold;
+  }
+  
+  &:hover {
+   transition: transform 0.5s ease-in-out; 
+   transform: scale(1.1); 
+
+   &::before { 
+     filter: invert(20%); 
+     transition: filter 0.5s ease-in-out; 
+   }
+  }
+`;
+const About = Styled.a`
+  position: relative;
+  display: inline-flex; 
+  align-items: center; 
+  height: 100px; 
+  text-decoration: none; 
+  padding: 0 15px; 
+  cursor: pointer;
+
+  &::before { 
+    content: "";
+    display: inline-block;
+    width: 100px; 
+    height: 100px; 
+    background-image: url("/img/about.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(100%); 
+    margin-right: 10px; 
+  }
+
+  &::after { 
+    content: "About";
+    color: #f9f9f9; 
+    font-size: 50px; 
+    font-weight: bold;
+  }
+  
+  &:hover {
+   transition: transform 0.5s ease-in-out; 
+   transform: scale(1.1); 
+
+   &::before { 
+     filter: invert(20%); 
+     transition: filter 0.5s ease-in-out; 
+   }
+  }
+`;
+const WatchList = Styled.a`
+  position: relative;
+  display: inline-flex; 
+  align-items: center; 
+  height: 100px; 
+  text-decoration: none; 
+  padding: 0 15px; 
+  cursor: pointer;
+
+  &::before { 
+    content: "";
+    display: inline-block;
+    width: 100px; 
+    height: 100px; 
+    background-image: url("/img/watchlist.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(100%); 
+    margin-right: 10px; 
+  }
+
+  &::after { 
+    content: "Watchlist";
+    color: #f9f9f9; 
+    font-size: 50px; 
+    font-weight: bold;
+  }
+  
+  &:hover {
+   transition: transform 0.5s ease-in-out; 
+   transform: scale(1.1); 
+
+   &::before { 
+     filter: invert(20%); 
+     transition: filter 0.5s ease-in-out; 
+   }
+  }
 `;
 export default Header;
